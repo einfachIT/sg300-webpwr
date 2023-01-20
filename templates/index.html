@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to WebPWR{% endblock %}</h1>
+    {% for pwr_port in pwr_ports%}
+        <a href="#">
+            <h2>{{ pwr_port['id'] }}</h2>
+        </a>
+        <span class="{{'on' if pwr_port['state']  == 'an' else 'off'}}">{{ pwr_port['state'] }}</span>
+        <form action="index" method="post">
+          <button type="button" id="btn-post" onclick="do_ajax({{ pwr_port['id'] }}, 1); window.location.reload(true);">turn_on</button>
+          <button type="button" id="btn-post" onclick="do_ajax({{ pwr_port['id'] }}, 2); window.location.reload(true);">turn_off</button>
+        </form>
+        <hr>
+    {% endfor %}
+{% endblock %}
