@@ -3,7 +3,8 @@ import os
 import subprocess
 
 app = Flask(__name__)
-app.config.from_object('PIaaS.config.DefaultConfig')
+#app.config.from_object('PIaaS.config.DefaultConfig')
+app.config.from_object('config.DefaultConfig')
 #print(app.config)
 
 
