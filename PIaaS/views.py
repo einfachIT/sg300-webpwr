@@ -1,9 +1,4 @@
-from flask import Flask, render_template, request
-import os
-import subprocess
-app = Flask(__name__)
-app.config.from_object('config.DefaultConfig')
-print(app.config)
+from PIaaS import app
 
 @app.route('/')
 def index():
