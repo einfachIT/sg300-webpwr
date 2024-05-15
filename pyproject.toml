@@ -2,6 +2,8 @@
 name = "PIaaS"
 version = "0.0.1"
 description = "PI as a Service bare metal cloud Frontend UI"
+long_description = open('README.md').read(),
+long_description_content_type = 'text/markdown',
 dependencies = [
     "flask",
 ]
