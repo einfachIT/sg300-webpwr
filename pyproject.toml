@@ -1,11 +1,15 @@
 [project]
 name = "PIaaS"
-version = "0.0.1"
+dynamic = ["version"]
 description = "PI as a Service bare metal cloud Frontend UI"
 readme = "README.md"
 dependencies = [
     "flask",
 ]
+
 [build-system]
-requires = ["flit_core<4"]
-build-backend = "flit_core.buildapi"
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
