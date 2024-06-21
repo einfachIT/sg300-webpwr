@@ -1,8 +1,8 @@
 #!/bin/bash
 
-python -m venv virt_env
+python3 -m venv virt_env
 source virt_env/bin/activate
-python -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
 pip install Flask setuptools wheel
 export FLASK_DEBUG=1
 export FLASK_APP=app.py
